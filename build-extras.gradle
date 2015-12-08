@@ -1,3 +1,13 @@
+def packageName = getPackageName()
+
+android.defaultConfig.applicationId = packageName
+
+def getPackageName() {
+    def config = file("res/xml/config.xml").getText()
+    def xml = new XmlParser(false, false).parseText(config)
+    return xml.attribute("id")
+}
+
 apply plugin: 'com.google.gms.google-services'
 
 buildscript {
