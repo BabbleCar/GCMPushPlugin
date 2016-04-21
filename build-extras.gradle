@@ -8,7 +8,7 @@ def getPackageName() {
     return xml.attribute("id")
 }
 
-apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'com.google.gms.google-services'
 
 buildscript {
     repositories {
